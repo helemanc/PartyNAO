@@ -102,14 +102,15 @@ The application flow can be divided in two main phases:
 
 We tested our project on Linux system, so it is recommended to run the program on a UNIX system (4 GB of RAM at least).
 ## Usage
-1. Set the correct `port` of the robot (i.e. enable the connection with the robot):
+1. Download the *Music* folder from [here](https://drive.google.com/drive/folders/1VDmFieCwuFoKJ2GUx1eXweIFB8Q9SzJO?usp=sharing) and copy it in the *PartyNAO* main folder
+2. Set the correct `port` of the robot (i.e. enable the connection with the robot):
    - If you are using a virtual robot on Choregraphe, open the "Robot browser" window and copy the `port` value showed there in files: 
      - *party_nao_project.py*
      - *party_nao_problem_def.py*
    - If you are using a real robot, set the `port` of the real robot as `port` value in the files: 
      - *party_nao_project.py*
      - *party_nao_problem_def.py*
-2. Open a terminal in the main folder of the project (i.e. `PartyNAO`) and run *party_nao_project.py* using the following command: `python party_nao_project.py`
+3. Open a terminal in the main folder of the project (i.e. `PartyNAO`) and run *party_nao_project.py* using the following command: `python party_nao_project.py`
 
 ----
 
