@@ -13,14 +13,14 @@ We used **simulated annealing**, which has a probabilistic component, because it
 
 This simulates the concept of live performance, which we think can excite the spectator, because it is unpredictable.
 ## Context 
-This project is part of the *NAO Planning Competition - 2019*, a competition with the aim of  mixing AI with creativity. 
+This project is part of the *NAO Planning Competition - 2019*, a competition with the aim of mixing AI with creativity. 
 
 **Objective**
 
 Deploying an algorithm to generate transitions between different positions.
 
 Create a choreography for the NAO robot so that is: 
-- fully automatically using AI techniques
+- fully automated using AI techniques
 - suitable for the song that is selected **randomly** 
 
 **Learning Outcomes**
@@ -29,7 +29,7 @@ Create a choreography for the NAO robot so that is:
 
 **Problem statement**
 
-In order to model the problem had at our disposal: 
+In order to model the problem we had at our disposal: 
 - an initial state and a goal state ![init_goal](images/init_goal.png)
 - a set of mandatory positions ![mandatory](images/mandatory_positions.png)
 
@@ -104,7 +104,7 @@ We tested our project on Linux system, so it is recommended to run the program o
 ## Usage
 1. Download the *Music* folder from [here](https://drive.google.com/drive/folders/1VDmFieCwuFoKJ2GUx1eXweIFB8Q9SzJO?usp=sharing) and copy it in the *PartyNAO* main folder
 2. Set the correct `port` of the robot (i.e. enable the connection with the robot):
-   - If you are using a virtual robot on Choregraphe, open the "Robot browser" window and copy the `port` value showed there in files: 
+   - If you are using a virtual robot on Choregraphe, open the "Robot browser" window and copy the `port` value showed there in the files: 
      - *party_nao_project.py*
      - *party_nao_problem_def.py*
    - If you are using a real robot, set the `port` of the real robot as `port` value in the files: 
@@ -115,13 +115,13 @@ We tested our project on Linux system, so it is recommended to run the program o
 ----
 
 Once started, our program will:
-- select a song randomly form *Music* folder 
+- select a song randomly from the *Music* folder 
 - plot its amplitude
 - run simulated annealing algorithm
 - find the best sequence of moves for the selected song 
 - automatically start the music and the choreography: let's party NAO!
 ## Demo 
-In [this](https://github.com/helemanc/PartyNAO/demo) folder you can find a short demo of our application in *.mp4* format.
+In [this](https://github.com/helemanc/PartyNAO/tree/main/demo) folder you can find a short demo of our application in *.mp4* format.
 
 ## Authors
 Eleonora Mancini, Francesco Rambaldi 
