@@ -8,10 +8,25 @@ from search_algorithms_partyNAO import Problem
 # Import utilities
 from itertools import permutations
 import time 
+from argparse import ArgumentParser
 
 # Robot connection settings
 ip = "127.0.0.1"
-port = 65211 # virtual robot port
+
+# Argument parsing 
+parser = ArgumentParser()
+parser.add_argument("-p", "--robot-port", 
+                    dest="port", 
+                    required=True,
+                    help="Port of NAO robot",
+                    metavar="PORT")
+
+args = vars(parser.parse_args())
+port = args
+
+# Robot connection settings
+ip = "127.0.0.1"
+port = int(args["port"]) #virtual robot port
 
 #--------------------------------------------------------------#
 # Dictionary {key=module : value=move_name}
@@ -105,7 +120,7 @@ class partyNAO(Problem):
         """The actions executable in this state."""
         result = []
         for key in self.dict_moves_time.keys():
-            if key[0] = =state:
+            if key[0] == state:
                 result.append(key)
         return result
         

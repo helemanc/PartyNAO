@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 from pydub.playback import play 
 from threading import Thread
+from playsound import playsound
 
 #--------------------------------------------------------------#
 # Plot the amplitudes without breaking the execution of the program
@@ -53,9 +54,9 @@ def analyze_music(song):
     
     time = np.arange(0, float(audData.shape[0]), 1)/rate
     # plot amplitude over time
-    thread = ThreadPlot(time, audData)
-    print("Now I plot the amplitudes...")
-    thread.start()
+    #thread = ThreadPlot(time, audData)
+    #print("Now I plot the amplitudes...")
+    #thread.start()
     #######################
 
     # INTENSITY ANALYSIS
@@ -73,5 +74,6 @@ def analyze_music(song):
 # Play the selected song
 def play_song(song):
     os.chdir('..')
-    wav = pydub.AudioSegment.from_wav(os.getcwd() + "/" + song)
-    play(wav)
+    playsound(os.getcwd() + "/" + song)
+    #wav = pydub.AudioSegment.from_wav(os.getcwd() + "/" + song)
+    #play(wav)

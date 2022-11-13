@@ -18,13 +18,27 @@ import glob, os
 import pydub 
 import music_detection as md
 from threading import Thread
+import sys 
+from argparse import ArgumentParser
 
 # Import problem fot partyNAO
 import party_nao_problem_def as pnp
 
+
+# Argument parsing 
+parser = ArgumentParser()
+parser.add_argument("-p", "--robot-port", 
+                    dest="port", 
+                    required=True,
+                    help="Port of NAO robot",
+                    metavar="PORT")
+
+args = vars(parser.parse_args())
+port = args
+
 # Robot connection settings
 ip = "127.0.0.1"
-port = 65211  #virtual robot port
+port = int(args["port"]) #virtual robot port
 
 #--------------------------------------------------------------#
 # The following function and threads allow us to synchronize the execution of the choreography and the song
@@ -50,7 +64,7 @@ class ThreadDance(Thread):
         Thread.__init__(self)
 
     def run(self):
-        time.sleep(3.0)
+        #time.sleep(3.0)
         execution_best_sequence(flat_list)
 
 #----------------------------MAIN------------------------------#
