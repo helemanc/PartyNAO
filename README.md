@@ -101,16 +101,21 @@ The application flow can be divided in two main phases:
 |     utils    |
 
 We tested our project on Linux system, so it is recommended to run the program on a UNIX system (4 GB of RAM at least).
+
+To install all the required packages, please run the following command:  `pip install -r requirements.txt`
+
 ## Usage
-1. Download the *Music* folder from [here](https://drive.google.com/drive/folders/1VDmFieCwuFoKJ2GUx1eXweIFB8Q9SzJO?usp=sharing) and copy it in the *PartyNAO* main folder
-2. Set the correct `port` of the robot (i.e. enable the connection with the robot):
-   - If you are using a virtual robot on Choregraphe, open the "Robot browser" window and copy the `port` value showed there in the files: 
-     - *party_nao_project.py*
-     - *party_nao_problem_def.py*
-   - If you are using a real robot, set the `port` of the real robot as `port` value in the files: 
-     - *party_nao_project.py*
-     - *party_nao_problem_def.py*
-3. Open a terminal in the main folder of the project (i.e. `PartyNAO`) and run *party_nao_project.py* using the following command: `python party_nao_project.py`
+1. 
+    **If you want to test the algorithm on ready-to-use audio files**:
+      - Download the *Music* folder from [here](https://drive.google.com/drive/folders/1VDmFieCwuFoKJ2GUx1eXweIFB8Q9SzJO?usp=sharing) and copy it in the *PartyNAO* main folder. 
+
+    **If you want to test the algorithm on new tracks**
+      - Create a **Music** folder within the main folder (PartyNAO).
+      - Within the Music folder, create a sub-folder **Music_Mono**.
+      - Put the desired audio file into the **Music** folder. The constraint for the algorithm to work correctly is that the file must be 3 minutes long and be in *.wav* format 
+2. Open a terminal in the main folder of the project (i.e. `PartyNAO`) and run *party_nao_project.py* using the following command: `python party_nao_project.py -p PORT`. The *PORT* argument can be retrieved as follows: 
+    - If you are using a virtual robot on Choregraphe, open the "Robot browser" window and copy the `port` value showed there
+    - If you are using a real robot, set the `port` of the real robot as `port` value
 
 ----
 
