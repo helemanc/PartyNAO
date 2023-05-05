@@ -7,7 +7,7 @@ cycler==0.10.0
 enum34==1.1.6
 ffmpeg==1.4
 ffmpeg-python==0.2.0
-future==0.18.2
+future==0.18.3
 glob2==0.7
 googletrans==2.4.0
 gyp==0.1
