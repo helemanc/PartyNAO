@@ -112,7 +112,7 @@ while times_indexes == []:  # This while terminates when a sequence which respec
     used_intermediate_moves = []
     dict_totale = {}
     
-    for i in range(20):  # This for allow us to generate 100 possible solutions in order to choose the best one
+    for i in range(50):  # This for allow us to generate 100 possible solutions in order to choose the best one
         used_intermediate_moves = []
 
         while len(used_intermediate_moves) <= 4:  # This while condition allows us to respect the constraint of
@@ -166,8 +166,9 @@ while times_indexes == []:  # This while terminates when a sequence which respec
     # We use the following cycle in order to scan the whole solutions dictionary and we select the best ones
     # (considering the constraint on time and number of moves, in order to create an artistic/complex choreography)
     for i in dict_totale.keys():
+	print('Debug', i[0], i[1])
         l_tempi.append(i[0])
-        if i[0] > 173 and i[0] < 175 and i[1] > 40 and i[1] < 46:
+        if i[0] > 80 and i[0] < 100 and i[1] > 12 and i[1] < 16:
             times_indexes.append(i)  # salviamo la tupla con il tempo che ci piace
         l_seq.append(i[1])
 
@@ -201,3 +202,4 @@ t2.start()
 t1.start()
 
 #--------------------------------------------------------------#
+

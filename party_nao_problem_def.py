@@ -143,7 +143,7 @@ class partyNAO(Problem):
         if self.goal_test(state):
             return 1 
         round_time = int(round(self.tot_time+self.increasing_time))
-        if (round_time > 179): #sequences with time greater than 179 are not interesting 
+        if (round_time > 80): #sequences with time greater than 179 are not interesting 
             return "Fail"
         intensity = self.analized_song[round_time]
     
